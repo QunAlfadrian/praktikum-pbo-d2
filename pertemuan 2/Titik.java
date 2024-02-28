@@ -6,12 +6,18 @@ public class Titik {
     private double absis, ordinat;
     private static int counterTitik;
 
-    Titik(double absisIn, double ordinatIn) {
+    public Titik(double absisIn, double ordinatIn) {
         absis = absisIn;
         ordinat = ordinatIn;
         counterTitik += 1;
     }
 
+    public Titik() {
+        absis = 0;
+        ordinat = 0;
+        counterTitik += 1;
+    }
+    
     public void setAbsis(double absisIn) {
         absis = absisIn;
     }
@@ -31,6 +37,10 @@ public class Titik {
     public static int getCounterTitik() {
         System.out.format("%d", counterTitik);
         return counterTitik;
+    }
+
+    public void getInfoTitik() {
+        System.out.printf("(%.2f, %.2f)\n", absis, ordinat);
     }
 
     public double getJarakPusat() {
