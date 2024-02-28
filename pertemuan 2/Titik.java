@@ -1,65 +1,54 @@
-// File      : Titik.java          21/02/24
-// Penulis   : Qun Alfadrian Setyowahyu Putro
-// Deskripsi : Kelas Titik yang merupakan sebuah titik dengan absis dan ordinat
-
 public class Titik {
     private double absis, ordinat;
     private static int counterTitik;
 
-    public Titik(double absisIn, double ordinatIn) {
-        absis = absisIn;
-        ordinat = ordinatIn;
-        counterTitik += 1;
+    public Titik(double x, double y) {
+        absis = x;
+        ordinat = y;
+        Titik.counterTitik += 1;
     }
 
     public Titik() {
-        absis = 0;
-        ordinat = 0;
-        counterTitik += 1;
-    }
-    
-    public void setAbsis(double absisIn) {
-        absis = absisIn;
-    }
-
-    public void setOrdinat(double ordinatIn) {
-        ordinat = ordinatIn;
+        this(0, 0);
     }
 
     public double getAbsis() {
-        return absis;
+        return this.absis;
     }
 
     public double getOrdinat() {
-        return ordinat;
+        return this.ordinat;
+    }
+    
+    public void setAbsis(double x) {
+        this.absis = x;
+    }
+    
+    public void setOrdinat(double y) {
+        this.absis = y;
     }
 
     public static int getCounterTitik() {
-        System.out.format("%d", counterTitik);
-        return counterTitik;
-    }
-
-    public void getInfoTitik() {
-        System.out.printf("(%.2f, %.2f)\n", absis, ordinat);
+        return Titik.counterTitik;
     }
 
     public double getJarakPusat() {
-        return Math.sqrt(Math.pow(absis, 2) + Math.pow(ordinat, 2));
+        return Math.sqrt(Math.pow(this.absis, 2) + Math.pow(this.ordinat, 2));
     }
 
     public void refleksiX() {
-        ordinat *= -1;
+        this.ordinat *= -1;
     }
 
     public void refleksiY() {
-        absis *= -1;
+        this.absis *= -1;
     }
 
     public Titik getRefleksiX() {
-        return new Titik(absis, ordinat*-1);
+        return new Titik(this.absis, this.ordinat*-1);
     }
 
     public Titik getRefleksiY() {
-        return new Titik(absis*-1, ordinat);
+        return new Titik(this.absis*-1, this.ordinat);
     }
 }

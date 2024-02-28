@@ -32,24 +32,4 @@ public class Titik {
         System.out.format("%d", counterTitik);
         return counterTitik;
     }
-
-    public double getJarakPusat() {
-        return Math.sqrt(Math.pow(absis, 2) + Math.pow(ordinat, 2));
-    }
-
-    public void refleksiX() {
-        ordinat *= -1;
-    }
-
-    public void refleksiY() {
-        absis *= -1;
-    }
-
-    public Titik getRefleksiX() {
-        return new Titik(absis, ordinat*-1);
-    }
-
-    public Titik getRefleksiY() {
-        return new Titik(absis*-1, ordinat);
-    }
 }
