@@ -1,4 +1,4 @@
-package tugas_3;
+package tugas_3.assertion;
 
 import java.util.Scanner;
 
@@ -10,6 +10,15 @@ public class UserRegistration {
         String username = scanner.nextLine();
         UserInputValidator.validateUsername(username);
 
+        System.out.print("Enter email address: ");
+        String email = scanner.nextLine();
+        UserInputValidator.validateEmail(email);
+
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
+        UserInputValidator.validateAge(age);
+
         System.out.println("User registration complete");
     }
 }
+
