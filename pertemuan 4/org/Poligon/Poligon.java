@@ -1,0 +1,9 @@
+package org.Poligon;
+
+public class Poligon {
+    protected int jumlahSisi;
+
+    public int getJumlahSisi() {
+        return this.jumlahSisi;
+    }
+}
