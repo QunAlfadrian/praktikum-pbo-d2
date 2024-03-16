@@ -51,4 +51,15 @@ public class Student extends Person {
             course.getDetails();
         }
     }
+
+    public void viewEnrolledCourses(Lecturer lecturer) {
+        System.out.println("==============================");
+        System.out.println("Courses with " + lecturer.getName() + " as the lecturer");
+        for (Course course : courseEnrolled) {
+            if (course.getLecturer() == lecturer) {
+                System.out.println();
+                course.getDetails();
+            }
+        }
+    }
 }

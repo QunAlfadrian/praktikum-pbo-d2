@@ -33,6 +33,10 @@ public class Course {
         return courseCode;
     }
 
+    public Lecturer getLecturer() {
+        return lecturer;
+    }
+
     public boolean isStudentEnrolled(Student student) {
         return studentsEnrolled.contains(student);
     }

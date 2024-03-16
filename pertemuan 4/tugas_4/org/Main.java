@@ -64,5 +64,8 @@ public class Main {
 
         sarah.teachCourse(dasis);
         sarah.viewTaugthCourses();
+
+        System.out.println("\n===== Melihat daftar course dengan lecturer tertentu =====");
+        sabrina.viewEnrolledCourses(sarah);
     }
 }
