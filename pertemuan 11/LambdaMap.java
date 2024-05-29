@@ -23,5 +23,6 @@ public class LambdaMap {
 
         /* Lambda sebagai parameter */        
         mahasiswaMap.keySet().forEach((nim) -> System.out.println("Nim: " + nim + "\nNama: " + mahasiswaMap.get(nim) + "\n"));
+        mahasiswaMap.forEach((nim, nama) -> System.out.println(nim + " " + nama));
     }
 }
